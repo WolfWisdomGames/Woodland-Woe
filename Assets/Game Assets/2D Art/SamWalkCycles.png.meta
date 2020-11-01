@@ -1,0 +1,874 @@
+fileFormatVersion: 2
+guid: d439c572fe67cc74fa4d2e4c45350b22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2559958444942244486
+    second: SamWalkCycles_0
+  - first:
+      213: -7573508949424587886
+    second: SamWalkCycles_1
+  - first:
+      213: 6438028983346613439
+    second: SamWalkCycles_2
+  - first:
+      213: -4140509270801255490
+    second: SamWalkCycles_3
+  - first:
+      213: 7650304250272198139
+    second: SamWalkCycles_4
+  - first:
+      213: -6650469359117541944
+    second: SamWalkCycles_5
+  - first:
+      213: 7501747091139721157
+    second: SamWalkCycles_6
+  - first:
+      213: -4373664869155820131
+    second: SamWalkCycles_7
+  - first:
+      213: -6552670260585169264
+    second: SamWalkCycles_8
+  - first:
+      213: 7254460819149129288
+    second: SamWalkCycles_9
+  - first:
+      213: 6814433311606204900
+    second: SamWalkCycles_10
+  - first:
+      213: -3428643489030476767
+    second: SamWalkCycles_11
+  - first:
+      213: -1415513664056914740
+    second: SamWalkCycles_12
+  - first:
+      213: -2818368578519569335
+    second: SamWalkCycles_13
+  - first:
+      213: 8937354449877180295
+    second: SamWalkCycles_14
+  - first:
+      213: 752445712965622584
+    second: SamWalkCycles_15
+  - first:
+      213: -8484149883748449705
+    second: SamWalkCycles_16
+  - first:
+      213: 1947891955767943066
+    second: SamWalkCycles_17
+  - first:
+      213: 5878972508040010251
+    second: SamWalkCycles_18
+  - first:
+      213: 6826914527996384300
+    second: SamWalkCycles_19
+  - first:
+      213: -4129506757949009066
+    second: SamWalkCycles_20
+  - first:
+      213: 3669333559194200356
+    second: SamWalkCycles_21
+  - first:
+      213: -8021251011819535368
+    second: SamWalkCycles_22
+  - first:
+      213: -2985267645189258454
+    second: SamWalkCycles_23
+  - first:
+      213: 1569564549260664057
+    second: SamWalkCycles_24
+  - first:
+      213: -8834857091285962583
+    second: SamWalkCycles_25
+  - first:
+      213: -923343768859632239
+    second: SamWalkCycles_26
+  - first:
+      213: -1028027241151623528
+    second: SamWalkCycles_27
+  - first:
+      213: 5763588164780258362
+    second: SamWalkCycles_28
+  - first:
+      213: -1543885259922333154
+    second: SamWalkCycles_29
+  - first:
+      213: -5954599100510984879
+    second: SamWalkCycles_30
+  - first:
+      213: -7853319812686723559
+    second: SamWalkCycles_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SamWalkCycles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 213
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75c4798b53397cd0800000000000000
+      internalID: -2559958444942244486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 213
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b3e469cbd75e690800000000000000
+      internalID: -7573508949424587886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 213
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc4b0e0049785950800000000000000
+      internalID: 6438028983346613439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 213
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3fdac61c4f986c0800000000000000
+      internalID: -4140509270801255490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 213
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfda22dbe275b2a60800000000000000
+      internalID: 7650304250272198139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 213
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cddd248a59c4b3a0800000000000000
+      internalID: -6650469359117541944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 213
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7f332cb3f8b1860800000000000000
+      internalID: 7501747091139721157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 213
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9dac5369fe9d43c0800000000000000
+      internalID: -4373664869155820131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09efd839d1d3015a0800000000000000
+      internalID: -6552670260585169264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_9
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 142
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8468f52eda50da460800000000000000
+      internalID: 7254460819149129288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 142
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e960e31efab19e50800000000000000
+      internalID: 6814433311606204900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_11
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 142
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ce1e699e20b60d0800000000000000
+      internalID: -3428643489030476767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_12
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 142
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc0d2f72d51b5ce0800000000000000
+      internalID: -1415513664056914740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_13
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 142
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ce73fc5b423e8d0800000000000000
+      internalID: -2818368578519569335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_14
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 142
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f9fa0258cd70c70800000000000000
+      internalID: 8937354449877180295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_15
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 142
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bd41aa369317a00800000000000000
+      internalID: 752445712965622584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 71
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7528006b1ae324a80800000000000000
+      internalID: -8484149883748449705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_17
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 71
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f9364d96d480b10800000000000000
+      internalID: 1947891955767943066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_18
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 71
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a1302195e469150800000000000000
+      internalID: 5878972508040010251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_19
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 71
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c249d29b7921ebe50800000000000000
+      internalID: 6826914527996384300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_20
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 71
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653dfd29b7b01b6c0800000000000000
+      internalID: -4129506757949009066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_21
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 71
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429a03e5e671ce230800000000000000
+      internalID: 3669333559194200356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_22
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 71
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3014204bacea090800000000000000
+      internalID: -8021251011819535368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_23
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 71
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a230701b4e23296d0800000000000000
+      internalID: -2985267645189258454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc5ab244a638c510800000000000000
+      internalID: 1569564549260664057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_25
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a03f88d848446580800000000000000
+      internalID: -8834857091285962583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_26
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d1d8bfbbf9f23f0800000000000000
+      internalID: -923343768859632239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_27
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e8bbfbba6bbb1f0800000000000000
+      internalID: -1028027241151623528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_28
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a347f5926e06cff40800000000000000
+      internalID: 5763588164780258362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_29
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e122e543984039ae0800000000000000
+      internalID: -1543885259922333154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_30
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155ae2abaa30d5da0800000000000000
+      internalID: -5954599100510984879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SamWalkCycles_31
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91645413d37630390800000000000000
+      internalID: -7853319812686723559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6b282d4383e407a4fa4a9c4da2d05fb5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
