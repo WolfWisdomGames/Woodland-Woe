@@ -45,6 +45,30 @@ public class CharSheetUIManager : MonoBehaviour
     [SerializeField]
     GameObject DeBoostIntellectButton;
 
+    [SerializeField]
+    GameObject HealthValueText;
+
+    [SerializeField]
+    GameObject DamageValueText;
+
+    [SerializeField]
+    GameObject MoveValueText;
+
+    [SerializeField]
+    GameObject AccuracyValueText;
+
+    [SerializeField]
+    GameObject DodgeValueText;
+
+    [SerializeField]
+    GameObject BackstabValueText;
+
+    [SerializeField]
+    GameObject ManaRegainValueText;
+
+    [SerializeField]
+    GameObject CritChanceValueText;
+
     private CharacterSheet characterBeingDisplayed;
 
     // Start is called before the first frame update
@@ -63,6 +87,14 @@ public class CharSheetUIManager : MonoBehaviour
         LevelValueText.GetComponent<Text>().text = characterBeingDisplayed.level.ToString();
         BonusPointsValueText.GetComponent<Text>().text = characterBeingDisplayed.freeStatPoints.ToString();
         XPValueText.GetComponent<Text>().text = characterBeingDisplayed.xp.ToString() + "/" + characterBeingDisplayed.NextLevelXp().ToString();
+        HealthValueText.GetComponent<Text>().text = characterBeingDisplayed.currentHealth.ToString() + "/" + characterBeingDisplayed.MaxHealth().ToString();
+        DamageValueText.GetComponent<Text>().text = characterBeingDisplayed.MinDamage().ToString() + "-" + characterBeingDisplayed.MaxDamage().ToString();
+        MoveValueText.GetComponent<Text>().text = characterBeingDisplayed.MoveSpeed().ToString();
+        AccuracyValueText.GetComponent<Text>().text = characterBeingDisplayed.HitPercent().ToString();
+        DodgeValueText.GetComponent<Text>().text = characterBeingDisplayed.DodgePercent().ToString();
+        BackstabValueText.GetComponent<Text>().text = characterBeingDisplayed.BackStab().ToString();
+        ManaRegainValueText.GetComponent<Text>().text = characterBeingDisplayed.ManaRegain().ToString();
+        CritChanceValueText.GetComponent<Text>().text = characterBeingDisplayed.CritPercent().ToString();
         if (characterBeingDisplayed.CanBoostMight())
             BoostMightButton.SetActive(true);
         else

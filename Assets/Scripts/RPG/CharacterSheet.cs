@@ -4,7 +4,6 @@ using System.Collections;
 public class CharacterSheet
 {
     public int currentHealth;
-    public int maxHealth;
 
     public int level;
     public int xp;
@@ -29,11 +28,55 @@ public class CharacterSheet
         intellect = 1;
         xp = (newLevel - 1) * 1000;
         level = newLevel;
-        maxHealth = (10 * level) + (2 * might);
-        currentHealth = maxHealth;
+        currentHealth = MaxHealth();
         freeStatPoints = (newLevel - 1) * 2;
         name = newName;
         ConfirmChanges();
+    }
+
+    public int MinDamage()
+    {
+        return 2 + might * 2;
+    }
+
+    public int MaxDamage()
+    {
+        return 2 + might * 2 + level;
+    }
+
+    public int MaxHealth()
+    {
+        return (5 * level) + (2 * might);
+    }
+
+    public int MoveSpeed()
+    {
+        return 4 + finesse / 3;
+    }
+
+    public int BackStab()
+    {
+        return 2 + finesse;
+    }
+
+    public int HitPercent()
+    {
+        return 75 + 5 * finesse;
+    }
+
+    public int DodgePercent()
+    {
+        return 5 * finesse;
+    }
+
+    public int ManaRegain()
+    {
+        return intellect;
+    }
+
+    public int CritPercent()
+    {
+        return intellect * 2;
     }
 
     public int NextLevelXp()
