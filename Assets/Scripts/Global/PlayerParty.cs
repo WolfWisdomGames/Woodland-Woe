@@ -14,4 +14,9 @@ public static class PlayerParty
         partyMembers.Add(new CharacterSheet("Friendly Woe", 1));
         rng = new System.Random();
     }
+
+    public static void SpawnPartyMembers()
+    {
+
+    }
 }

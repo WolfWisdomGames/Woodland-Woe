@@ -34,6 +34,21 @@ public class CharacterSheet
         ConfirmChanges();
     }
 
+    public void SpawnCombatAvatar(Vector3 location, Quaternion rotation, bool asPC, string prefabPath)
+    {
+        GameObject combatPrefab = (GameObject)Resources.Load(prefabPath, typeof(GameObject));
+        GameObject avatar = GameObject.Instantiate(combatPrefab, location, rotation) as GameObject;
+        if (asPC)
+        {
+            avatar.AddComponent<PlayerController>();
+        }
+        else
+        {
+            avatar.AddComponent<EnemyController>();
+        }
+        // List<Action> specialMoves = new List<Action> { };
+    }
+
     public int MinDamage()
     {
         return 2 + might * 2;

@@ -65,6 +65,14 @@
     <Compile Include="Assets\Scripts\Global\Constants.cs" />
     <Compile Include="Assets\Scripts\Global\PlayerParty.cs" />
     <Compile Include="Assets\Scripts\RPG\CharacterSheet.cs" />
+    <Compile Include="Assets\Scripts\Global\EnemyParty.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\EnterCombat.cs" />
+    <Compile Include="Assets\Scripts\Combat\Tile.cs" />
+    <Compile Include="Assets\Scripts\Combat\CombatManager.cs" />
+    <Compile Include="Assets\Scripts\Combat\CombatInitializer.cs" />
+    <Compile Include="Assets\Scripts\Combat\Controllers\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Combat\Controllers\CombatController.cs" />
+    <Compile Include="Assets\Scripts\Combat\Controllers\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
