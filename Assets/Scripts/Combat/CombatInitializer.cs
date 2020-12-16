@@ -23,6 +23,8 @@ public class CombatInitializer : MonoBehaviour
                 t.x = x; t.y = y;
             }
         }
+        EnemyParty.SpawnPartyMembers();
+        PlayerParty.SpawnPartyMembers();
         // Populate player and enemy parties.
     }
 

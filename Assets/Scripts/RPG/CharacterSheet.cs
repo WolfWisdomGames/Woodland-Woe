@@ -20,8 +20,10 @@ public class CharacterSheet
     private int minFinesse;
     private int minIntellect;
 
+    private string avatarFileName;
+
     // Use this for initialization
-    public CharacterSheet(string newName, int newLevel)
+    public CharacterSheet(string newName, int newLevel, string newAvatarFileName)
     {
         might = 1;
         finesse = 1;
@@ -31,22 +33,31 @@ public class CharacterSheet
         currentHealth = MaxHealth();
         freeStatPoints = (newLevel - 1) * 2;
         name = newName;
+        avatarFileName = newAvatarFileName;
         ConfirmChanges();
     }
 
-    public void SpawnCombatAvatar(Vector3 location, Quaternion rotation, bool asPC, string prefabPath)
+    public void SpawnCombatAvatar(Vector3 location, Quaternion rotation, bool asPC)
     {
-        GameObject combatPrefab = (GameObject)Resources.Load(prefabPath, typeof(GameObject));
+        GameObject combatPrefab = (GameObject)Resources.Load("Prefabs/Combat/" + avatarFileName, typeof(GameObject));
         GameObject avatar = GameObject.Instantiate(combatPrefab, location, rotation) as GameObject;
+        CombatController c;
         if (asPC)
         {
-            avatar.AddComponent<PlayerController>();
+            c = avatar.AddComponent<PlayerController>();
         }
         else
         {
-            avatar.AddComponent<EnemyController>();
+            c = avatar.AddComponent<EnemyController>();
         }
+        c.SetCharacterSheet(this);
+        CombatManager.combatants.Add(c);
         // List<Action> specialMoves = new List<Action> { };
+    }
+
+    public bool CanDeploy()
+    {
+        return true;
     }
 
     public int MinDamage()

@@ -4,15 +4,16 @@ using System.Collections;
 public class CombatController : MonoBehaviour
 {
 
+    protected CharacterSheet characterSheet = null;
+
     // Use this for initialization
     void Start()
     {
-
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetCharacterSheet(CharacterSheet c)
     {
-
+        characterSheet = c;
     }
+
 }
