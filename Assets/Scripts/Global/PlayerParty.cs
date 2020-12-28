@@ -18,16 +18,17 @@ public static class PlayerParty
 
     public static void SpawnPartyMembers()
     {
-        float xPos = 1f;
-        float yPos = .75f;
+        TurnManager m = GameObject.FindObjectOfType<TurnManager>();
+        int xPos = 1;
+        int yPos = 0;
         Quaternion facing = new Quaternion(0f, 180f, 0f, 0f);
         foreach (CharacterSheet c in partyMembers)
         {
             if (c.CanDeploy())
             {
-                c.SpawnCombatAvatar(new Vector3(xPos, yPos, 0f), facing, true);
-                xPos += 1f;
-                yPos += .75f;
+                CombatController avatar = c.SpawnCombatAvatar(new Vector3(xPos + yPos, xPos * 0.75f - yPos * 0.75f, 0f), facing, true);
+                avatar.SetCurrentTile(m.tileGrid[xPos, yPos]);
+                xPos += 1;
             }
         }
     }

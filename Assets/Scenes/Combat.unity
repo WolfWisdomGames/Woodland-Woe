@@ -282,8 +282,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1051031030}
   - component: {fileID: 1051031031}
+  - component: {fileID: 1051031032}
   m_Layer: 0
-  m_Name: CombatManager
+  m_Name: TurnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -315,8 +316,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3479460f17a15f144b4a6a8dbffb0309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 2775624125630981862, guid: e4ab60392ba5c4b409dcf6766f1c6e66,
+  tilePrefab: {fileID: 1980494628968733268, guid: aadafe080f4bcc04995b9804d03e54b6,
     type: 3}
+  manager: {fileID: 1051031032}
+--- !u!114 &1051031032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051031029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419e3dba0402f3a45ae6df9834f6c806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatants: []
 --- !u!1 &1620223641
 GameObject:
   m_ObjectHideFlags: 0

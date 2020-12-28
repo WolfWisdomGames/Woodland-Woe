@@ -5,12 +5,13 @@ using System.Collections;
 public class CombatInitializer : MonoBehaviour
 {
     [SerializeField] GameObject tilePrefab;
+    [SerializeField] TurnManager manager;
 
     // Use this for initialization
     void Start()
     {
         // Populate Tile Grid.
-        CombatManager.tileGrid = new Tile[Constants.COMBAT_WIDTH, Constants.COMBAT_HEIGHT];
+        manager.tileGrid = new Tile[Constants.COMBAT_WIDTH, Constants.COMBAT_HEIGHT];
         for (int x = 0; x < Constants.COMBAT_WIDTH; x++)
         {
             for (int y = 0; y < Constants.COMBAT_HEIGHT; y++)
@@ -19,18 +20,14 @@ public class CombatInitializer : MonoBehaviour
                 SpriteRenderer rend = newTile.GetComponent<SpriteRenderer>();
                 rend.sortingOrder = y - x;
                 Tile t = newTile.GetComponent<Tile>();
-                CombatManager.tileGrid[x, y] = t;
+                manager.tileGrid[x, y] = t;
                 t.x = x; t.y = y;
             }
         }
         EnemyParty.SpawnPartyMembers();
         PlayerParty.SpawnPartyMembers();
-        // Populate player and enemy parties.
+
+        manager.combatants.Sort(new SortCombatants());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

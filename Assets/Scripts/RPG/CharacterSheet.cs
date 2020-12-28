@@ -5,6 +5,8 @@ public class CharacterSheet
 {
     public int currentHealth;
 
+    public int currentMana;
+
     public int level;
     public int xp;
 
@@ -37,7 +39,7 @@ public class CharacterSheet
         ConfirmChanges();
     }
 
-    public void SpawnCombatAvatar(Vector3 location, Quaternion rotation, bool asPC)
+    public CombatController SpawnCombatAvatar(Vector3 location, Quaternion rotation, bool asPC)
     {
         GameObject combatPrefab = (GameObject)Resources.Load("Prefabs/Combat/" + avatarFileName, typeof(GameObject));
         GameObject avatar = GameObject.Instantiate(combatPrefab, location, rotation) as GameObject;
@@ -50,9 +52,17 @@ public class CharacterSheet
         {
             c = avatar.AddComponent<EnemyController>();
         }
+        avatar.AddComponent<ActionMove>();
         c.SetCharacterSheet(this);
-        CombatManager.combatants.Add(c);
+        GameObject.FindObjectOfType<TurnManager>().combatants.Add(c);
         // List<Action> specialMoves = new List<Action> { };
+        return c;
+    }
+
+    // This is intended to only be used during combat.
+    public void DisplayPopupDuringCombat(string popupText)
+    {
+
     }
 
     public bool CanDeploy()
@@ -102,7 +112,7 @@ public class CharacterSheet
 
     public int CritPercent()
     {
-        return intellect * 2;
+        return finesse * 3;
     }
 
     public int NextLevelXp()
