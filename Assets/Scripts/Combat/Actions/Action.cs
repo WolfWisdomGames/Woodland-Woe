@@ -71,7 +71,7 @@ public class Action : MonoBehaviour
     protected void EndAction()
     {
         characterSheet.currentMana -= MANA_COST;
-        combatController.EndAction();
+        combatController.EndAction(ACTION_TYPE);
         inProgress = false;
     }
 }

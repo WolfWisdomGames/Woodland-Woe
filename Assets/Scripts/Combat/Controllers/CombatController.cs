@@ -11,6 +11,7 @@ public class CombatController : MonoBehaviour
     protected List<Tile> selectableTiles = new List<Tile>();
     TurnManager manager;
 
+    protected bool hasMoved = false;
     private Tile currentTile;
 
     // Use this for initialization
@@ -56,6 +57,7 @@ public class CombatController : MonoBehaviour
             // characterSheet.UpdateUI();
         }
         isTurn = true;
+        hasMoved = false;
         FindSelectableBasicTiles();
     }
 
@@ -76,11 +78,19 @@ public class CombatController : MonoBehaviour
         isActing = true;
     }
 
-    public void EndAction()
+    public void EndAction(Action.ActionType t)
     {
-        manager.ResetTileSearch();
-        FindSelectableBasicTiles();
         isActing = false;
+        manager.ResetTileSearch();
+        if (t == Action.ActionType.MOVE_EQUIVILANT && !hasMoved)
+        {
+            hasMoved = true;
+            FindSelectableBasicTiles();
+        }
+        else
+        {
+            EndTurn();
+        }
     }
 
     public void SetCurrentTile(Tile t)
@@ -124,7 +134,7 @@ public class CombatController : MonoBehaviour
                 selectableTiles.Add(tile);
                 tile.canBeChosen = true;
                 tile.wasVisited = true;
-                if (tile.distance > characterSheet.MoveSpeed()) tile.requiresRun = true;
+                if (tile.distance > characterSheet.MoveSpeed() || hasMoved) tile.requiresRun = true;
             }
 
 
@@ -140,11 +150,12 @@ public class CombatController : MonoBehaviour
                         adjacentTile.wasVisited = true;
                     }
                     // Potential children in search tree.
-                    if (adjacentTile.occupant == null && !adjacentTile.wasVisited && adjacentTile.GetMoveCost() + tile.distance <= characterSheet.MoveSpeed() * 2)
-                    {
-                        AttachTile(adjacentTile, tile);
-                        queue.Add(adjacentTile);
-                    }
+                    if (adjacentTile.occupant == null && !adjacentTile.wasVisited)
+                        if (adjacentTile.GetMoveCost() + tile.distance <= characterSheet.MoveSpeed() * (hasMoved ? 1 : 2))
+                        {
+                            AttachTile(adjacentTile, tile);
+                            queue.Add(adjacentTile);
+                        }
                 }
             }
         }

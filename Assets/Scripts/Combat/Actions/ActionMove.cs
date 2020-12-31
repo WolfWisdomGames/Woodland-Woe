@@ -5,8 +5,9 @@ using UnityEngine;
 public class ActionMove : Action
 {
     [SerializeField] private float moveSpeed = 2;
-
+    override public ActionType ACTION_TYPE { get { return (hasRun ? ActionType.FULL_ROUND : ActionType.MOVE_EQUIVILANT); } }
     protected Stack<Tile> path = new Stack<Tile>();
+    private bool hasRun = false;
 
     override protected void Start()
     {
@@ -49,6 +50,7 @@ public class ActionMove : Action
                 // Center of tile reached
                 transform.position = targetPos;
                 combatController.SetCurrentTile(path.Peek());
+                if (path.Peek().requiresRun) hasRun = true;
                 path.Pop();
             }
         }
@@ -61,6 +63,7 @@ public class ActionMove : Action
 
     override public void BeginAction(Tile targetTile)
     {
+        hasRun = false;
         currentPhase = Phase.MOVING;
         PreparePath(targetTile);
         base.BeginAction(targetTile);
