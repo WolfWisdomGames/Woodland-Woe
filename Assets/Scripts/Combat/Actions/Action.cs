@@ -28,7 +28,7 @@ public class Action : MonoBehaviour
 
     protected Animator anim;
     protected bool inProgress = false;
-    private CombatController combatController;
+    protected CombatController combatController;
     protected CharacterSheet characterSheet;
 
     virtual public int MANA_COST { get { return 0; } }
@@ -73,6 +73,5 @@ public class Action : MonoBehaviour
         characterSheet.currentMana -= MANA_COST;
         combatController.EndAction();
         inProgress = false;
-
     }
 }

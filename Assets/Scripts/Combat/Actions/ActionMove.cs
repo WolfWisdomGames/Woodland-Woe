@@ -41,15 +41,14 @@ public class ActionMove : Action
             if (Vector3.Distance(transform.position, targetPos) >= 0.01f)
             {
                 Vector3 direction = CalculateDirection(targetPos);
-                transform.forward = new Vector3(direction.x, direction.y, 180.0f);
-                direction = CalculateDirection(targetPos);
-                Vector3 velocity = GetHorizontalVelocity(direction);
-                transform.Translate(velocity * Time.deltaTime);
+                transform.up = new Vector3(direction.x, direction.y, 0f);
+                transform.Translate(direction * Time.deltaTime * moveSpeed, Space.World);
             }
             else
             {
                 // Center of tile reached
                 transform.position = targetPos;
+                combatController.SetCurrentTile(path.Peek());
                 path.Pop();
             }
         }
@@ -67,6 +66,7 @@ public class ActionMove : Action
         base.BeginAction(targetTile);
     }
 
+
     private void PreparePath(Tile targetTile)
     {
         path.Clear();
@@ -83,10 +83,5 @@ public class ActionMove : Action
     {
         Vector3 direction = target - transform.position;
         return direction.normalized;
-    }
-
-    private Vector3 GetHorizontalVelocity(Vector3 direction)
-    {
-        return direction * moveSpeed;
     }
 }
