@@ -42,8 +42,8 @@ public class Action : MonoBehaviour
 
     protected IEnumerator EndActionAfterDelay(float fDuration)
     {
-        yield return new WaitForSeconds(fDuration);
         currentPhase = Phase.NONE;
+        yield return new WaitForSeconds(fDuration);
         EndAction();
         yield break;
     }
@@ -70,8 +70,9 @@ public class Action : MonoBehaviour
 
     protected void EndAction()
     {
+        inProgress = false;
+        currentPhase = Phase.NONE;
         characterSheet.currentMana -= MANA_COST;
         combatController.EndAction(ACTION_TYPE);
-        inProgress = false;
     }
 }

@@ -44,6 +44,8 @@ public class CharacterSheet
         GameObject combatPrefab = (GameObject)Resources.Load("Prefabs/Combat/" + avatarFileName, typeof(GameObject));
         GameObject avatar = GameObject.Instantiate(combatPrefab, location, rotation) as GameObject;
         CombatController c;
+        avatar.AddComponent<ActionMove>();
+        avatar.AddComponent<ActionBasicAttack>();
         if (asPC)
         {
             c = avatar.AddComponent<PlayerController>();
@@ -52,11 +54,14 @@ public class CharacterSheet
         {
             c = avatar.AddComponent<EnemyController>();
         }
-        avatar.AddComponent<ActionMove>();
         c.SetCharacterSheet(this);
         GameObject.FindObjectOfType<TurnManager>().combatants.Add(c);
         // List<Action> specialMoves = new List<Action> { };
         return c;
+    }
+
+    public void PerformBasicAttack(CharacterSheet target)
+    {
     }
 
     // This is intended to only be used during combat.

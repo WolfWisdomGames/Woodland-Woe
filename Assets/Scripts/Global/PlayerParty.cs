@@ -12,7 +12,7 @@ public static class PlayerParty
         partyMembers = new List<CharacterSheet> { };
         partyMembers.Add(new CharacterSheet("Sam", 2, "CombatAvatarSam"));
         partyMembers.Add(new CharacterSheet("Friendly Woe", 1, "CombatAvatarWoe"));
-        partyMembers.Add(new CharacterSheet("Friendly Woe", 1, "CombatAvatarWoe"));
+        //partyMembers.Add(new CharacterSheet("Friendly Woe", 1, "CombatAvatarWoe"));
         rng = new System.Random();
     }
 

@@ -8,6 +8,7 @@ public class ActionMove : Action
     override public ActionType ACTION_TYPE { get { return (hasRun ? ActionType.FULL_ROUND : ActionType.MOVE_EQUIVILANT); } }
     protected Stack<Tile> path = new Stack<Tile>();
     private bool hasRun = false;
+    protected int reserveTiles = 0;
 
     override protected void Start()
     {
@@ -15,7 +16,7 @@ public class ActionMove : Action
     }
 
     // Update is called once per frame
-    void Update()
+    virtual protected void Update()
     {
         if (!inProgress)
         {
@@ -27,14 +28,13 @@ public class ActionMove : Action
         }
         else
         {
-            currentPhase = Phase.NONE;
             EndAction();
         }
     }
 
     protected void Move()
     {
-        if (path.Count > 0)
+        if (path.Count > reserveTiles)
         {
             Tile tile = path.Peek();
             Vector3 targetPos = tile.transform.position;
@@ -49,7 +49,8 @@ public class ActionMove : Action
             {
                 // Center of tile reached
                 transform.position = targetPos;
-                combatController.SetCurrentTile(path.Peek());
+                if (path.Count == 1 + reserveTiles)
+                    combatController.SetCurrentTile(path.Peek());
                 if (path.Peek().requiresRun) hasRun = true;
                 path.Pop();
             }

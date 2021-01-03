@@ -13,7 +13,7 @@ public static class EnemyParty
         partyMembers.Add(new CharacterSheet("Bramble", 1, "CombatAvatarBramble"));
         partyMembers.Add(new CharacterSheet("Bramble", 1, "CombatAvatarBramble"));
         partyMembers.Add(new CharacterSheet("Bramble", 1, "CombatAvatarBramble"));
-        partyMembers.Add(new CharacterSheet("Bramble", 1, "CombatAvatarBramble"));
+        //partyMembers.Add(new CharacterSheet("Bramble", 1, "CombatAvatarBramble"));
         rng = new System.Random();
     }
 
@@ -27,7 +27,7 @@ public static class EnemyParty
         {
             if (c.CanDeploy())
             {
-                CombatController avatar = c.SpawnCombatAvatar(new Vector3(xPos + yPos, xPos * 0.75f - yPos * 0.75f, 0f), facing, true);
+                CombatController avatar = c.SpawnCombatAvatar(new Vector3(xPos + yPos, xPos * 0.75f - yPos * 0.75f, 0f), facing, false);
                 avatar.SetCurrentTile(m.tileGrid[xPos, yPos]);
                 xPos -= 1;
             }

@@ -40,7 +40,9 @@ public class Tile : MonoBehaviour
         if (isHovered) GetComponent<Renderer>().material.color = Color.magenta;
         else if (canBeChosen)
         {
-            if (requiresRun)
+            if (occupant != null)
+                GetComponent<Renderer>().material.color = Color.red;
+            else if (requiresRun)
                 GetComponent<Renderer>().material.color = Color.yellow;
             else
                 GetComponent<Renderer>().material.color = Color.green;

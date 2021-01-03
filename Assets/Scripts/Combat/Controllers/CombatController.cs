@@ -9,7 +9,7 @@ public class CombatController : MonoBehaviour
     public bool isActing = false;
     protected Action selectedAction = null;
     protected List<Tile> selectableTiles = new List<Tile>();
-    TurnManager manager;
+    protected TurnManager manager;
 
     protected bool hasMoved = false;
     private Tile currentTile;
@@ -18,6 +18,7 @@ public class CombatController : MonoBehaviour
     void Start()
     {
         manager = FindObjectOfType<TurnManager>();
+        selectedAction = GetComponent<ActionBasicAttack>();
     }
 
     virtual public bool IsPC()
@@ -117,6 +118,7 @@ public class CombatController : MonoBehaviour
     private void FindSelectableTiles()
     {
         manager.ResetTileSearch();
+        selectableTiles.Clear();
 
         // TODO: Replace with PriorityQueue for performance optimization
         List<Tile> queue = new List<Tile>();
@@ -137,15 +139,14 @@ public class CombatController : MonoBehaviour
                 if (tile.distance > characterSheet.MoveSpeed() || hasMoved) tile.requiresRun = true;
             }
 
-
             foreach (Tile adjacentTile in tile.neighbors)
             {
                 if (!adjacentTile.wasVisited)
                 {
-                    if (ContainsEnemy(adjacentTile) && tile.distance <= characterSheet.MoveSpeed())
+                    if (tile.distance <= characterSheet.MoveSpeed() * (hasMoved ? 0 : 1) && ContainsEnemy(adjacentTile))
                     {
                         AttachTile(adjacentTile, tile);
-                        selectableTiles.Add(tile);
+                        selectableTiles.Add(adjacentTile);
                         adjacentTile.canBeChosen = true;
                         adjacentTile.wasVisited = true;
                     }

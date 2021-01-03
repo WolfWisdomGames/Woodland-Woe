@@ -8,11 +8,17 @@ public class TurnManager : MonoBehaviour
 {
     public Tile[,] tileGrid;
     public List<CombatController> combatants = new List<CombatController>();
+    System.Random rng;
 
     private int moveIdx = -1;
     private bool enemyTurn = false;
     private bool frozen = false;
     private bool gameOver = false;
+
+    public void Start()
+    {
+        rng = new System.Random();
+    }
 
     CombatController GetCurrentCombatController()
     {
@@ -23,6 +29,28 @@ public class TurnManager : MonoBehaviour
         {
             return combatants[moveIdx];
         }
+        return null;
+    }
+
+    public List<CombatController> AllLivingPCs()
+    {
+        List<CombatController> r = new List<CombatController>();
+        foreach (CombatController pick in combatants)
+        {
+            if (pick == null) continue;
+            if (pick.IsPC() && !pick.Dead())
+            {
+                r.Add(pick);
+            }
+        }
+        return r;
+    }
+
+    // Picks an arbitrary/random Player controlled character
+    public GameObject PickArbitraryPC()
+    {
+        List<CombatController> pcs = AllLivingPCs();
+        if (pcs.Count > 0) return pcs[rng.Next(pcs.Count)].gameObject;
         return null;
     }
 

@@ -89,8 +89,8 @@ public class PlayerController : CombatController
             ClearMouseHover();
             if (clickedTile.occupant != null)
             {
-                // selectedAction.BeginAction(clickedTile);
-                // selectedAction = GetComponent<ActionBasicAttack>();
+                selectedAction.BeginAction(clickedTile);
+                selectedAction = GetComponent<ActionBasicAttack>();
                 return;
             }
             else
