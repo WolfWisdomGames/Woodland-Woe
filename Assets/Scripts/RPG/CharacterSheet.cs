@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CharacterSheet
 {
@@ -24,6 +25,12 @@ public class CharacterSheet
 
     private string avatarFileName;
 
+    public GameObject avatar;
+    private IndicatorBar healthBar;
+    private IndicatorBar manaBar;
+    private CombatController combatController;
+    public bool dead;
+
     // Use this for initialization
     public CharacterSheet(string newName, int newLevel, string newAvatarFileName)
     {
@@ -41,27 +48,49 @@ public class CharacterSheet
 
     public CombatController SpawnCombatAvatar(Vector3 location, Quaternion rotation, bool asPC)
     {
+        dead = false;
+        if (currentHealth <= 0) currentHealth = 1;
         GameObject combatPrefab = (GameObject)Resources.Load("Prefabs/Combat/" + avatarFileName, typeof(GameObject));
-        GameObject avatar = GameObject.Instantiate(combatPrefab, location, rotation) as GameObject;
-        CombatController c;
+        avatar = GameObject.Instantiate(combatPrefab, location, rotation) as GameObject;
+        healthBar = avatar.transform.Find("Canvas").transform.Find("HealthBar").GetComponent<IndicatorBar>();
+        healthBar.SetSliderMax(MaxHealth());
+        healthBar.SetSlider(currentHealth);
+        manaBar = avatar.transform.Find("Canvas").transform.Find("ManaBar").GetComponent<IndicatorBar>();
+        manaBar.SetSliderMax(MaxMana());
+        manaBar.SetSlider(currentMana);
         avatar.AddComponent<ActionMove>();
         avatar.AddComponent<ActionBasicAttack>();
         if (asPC)
         {
-            c = avatar.AddComponent<PlayerController>();
+            combatController = avatar.AddComponent<PlayerController>();
         }
         else
         {
-            c = avatar.AddComponent<EnemyController>();
+            combatController = avatar.AddComponent<EnemyController>();
         }
-        c.SetCharacterSheet(this);
-        GameObject.FindObjectOfType<TurnManager>().combatants.Add(c);
+        combatController.SetCharacterSheet(this);
+        GameObject.FindObjectOfType<TurnManager>().combatants.Add(combatController);
         // List<Action> specialMoves = new List<Action> { };
-        return c;
+        return combatController;
+    }
+
+    public void ReceiveDamage(int amount)
+    {
+        currentHealth -= amount;
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            dead = true;
+            combatController.Die();
+            GameObject.Destroy(avatar);
+        }
+        healthBar.SetSlider(currentHealth);
     }
 
     public void PerformBasicAttack(CharacterSheet target)
     {
+        int dam = MinDamage() + Random.Range(0, 1 + MaxDamage() - MinDamage());
+        target.ReceiveDamage(dam);
     }
 
     // This is intended to only be used during combat.
@@ -88,6 +117,11 @@ public class CharacterSheet
     public int MaxHealth()
     {
         return (5 * level) + (2 * might);
+    }
+
+    public int MaxMana()
+    {
+        return 10 * intellect;
     }
 
     public int MoveSpeed()

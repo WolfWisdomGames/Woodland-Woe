@@ -45,9 +45,21 @@ public class CombatController : MonoBehaviour
         characterSheet = c;
     }
 
+    public void Die()
+    {
+        StartCoroutine(DieAfterDelay(0.8f));
+    }
+
+    private IEnumerator DieAfterDelay(float fDuration)
+    {
+        yield return new WaitForSeconds(fDuration);
+        Destroy(characterSheet.avatar);
+        yield break;
+    }
+
     public bool Dead()
     {
-        return false;
+        return characterSheet.dead;
     }
 
     public void BeginTurn()

@@ -46,6 +46,20 @@ public class TurnManager : MonoBehaviour
         return r;
     }
 
+    public List<CombatController> AllLivingEnemies()
+    {
+        List<CombatController> r = new List<CombatController>();
+        foreach (CombatController pick in combatants)
+        {
+            if (pick == null) continue;
+            if (pick.IsEnemy() && !pick.Dead())
+            {
+                r.Add(pick);
+            }
+        }
+        return r;
+    }
+
     // Picks an arbitrary/random Player controlled character
     public GameObject PickArbitraryPC()
     {
@@ -84,11 +98,25 @@ public class TurnManager : MonoBehaviour
 
     void AdvanceToNextTurn()
     {
+        if (CheckGameOver())
+        {
+            gameOver = true;
+            return;
+        }
         moveIdx = (moveIdx + 1) % combatants.Count;
         if (GetCurrentCombatController() != null)
         {
             StartCoroutine(BeginTurnAfterDelay(0.25f));
         }
+    }
+
+    bool CheckGameOver()
+    {
+        if (AllLivingPCs().Count == 0)
+            return true;
+        if (AllLivingEnemies().Count == 0)
+            return true;
+        return false;
     }
 
     void Update()
